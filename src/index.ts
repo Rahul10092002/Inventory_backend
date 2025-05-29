@@ -5,7 +5,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import dashboardRoutes from './routes/dashboardRoutes';
-
+import productRoutes from './routes/productRoutes';
 // route import
 
 
@@ -24,7 +24,7 @@ app.use(cors());
 
 // routes
 app.use('/dashboard',dashboardRoutes);
-
+app.use('/products',productRoutes);
 // server
 const port=process.env.PORT || 5000;
 app.listen(port, () => {
